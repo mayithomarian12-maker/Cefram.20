@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Productos en venta- Inicio</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+    <header>
+        <h1>Productos</h1>
+    </header>
+
+    <nav>
+        <a href="index.html">Inicio</a>
+        <a href="productos.html">Productos</a>
+        <a href="pedidos.html">Pedidos</a>
+        <a href="horarios.html">Horarios</a>
+        <a href="contacto.html">Contacto</a>
+        </nav>
+
+          <main>
+        <section>    
+            <h2>¡Los mejores productos que puedes encontrar!</h2>            
+            
+            <table class="tabla-productos">
+                <tr>
+                    <td><img src="cheesecake.jpg" alt="Cheesecake" onclick="verProducto('Cheesecake', 'Suave crema de queso sobre base crujiente de galleta con mermelada de frutos rojos.', '$4.50')"></td>
+                    <td><img src="Cupcakes.jpg" alt="Cupcake" onclick="verProducto('Cupcake', 'Deliciosos panquecitos decorados con crema de mantequilla de vainilla o chocolate.', '$2.00')"></td>
+                    <td><img src="brownie.jpg" alt="Brownie" onclick="verProducto('Brownie', 'Bizcocho de chocolate espeso y húmedo con trozos de nuez, servido tibio.', '$2.50')"></td>
+                    <td><img src="tresleches.jpg" alt="Tres Leches" onclick="verProducto('Tres Leches', 'Pastel tradicional súper húmedo, bañado en tres tipos de leche.', '$3.50')"></td>
+                </tr>
+                <tr class="detalles-producto">
+                    <td onclick="verProducto('Cheesecake', 'Suave crema de queso sobre base crujiente de galleta con mermelada de frutos rojos.', '$4.50')">Cheesecake</td>
+                    <td onclick="verProducto('Cupcake', 'Deliciosos panquecitos decorados con crema de mantequilla de vainilla o chocolate.', '$2.00')">Cupcake</td>
+                    <td onclick="verProducto('Brownie', 'Bizcocho de chocolate espeso y húmedo con trozos de nuez, servido tibio.', '$2.50')">Brownie</td>
+                    <td onclick="verProducto('Tres Leches', 'Pastel tradicional súper húmedo, bañado en tres tipos de leche.', '$3.50')">Tres Leches</td>
+                </tr>
+                <tr>
+                    <td><img src="donas.jpg" alt="Donas" onclick="verProducto('Donas', 'Donas esponjosas glaseadas de azúcar o cubiertas de chocolate.', '$1.50')"></td>
+                    <td><img src="galletas.avif" alt="Galletas" onclick="verProducto('Galletas', 'Galletas horneadas con abundantes chispas de chocolate derretido.', '$1.00')"></td>
+                    <td><img src="tiramisu.webp" alt="Tiramisú" onclick="verProducto('Tiramisú', 'Postre italiano frío con capas de bizcocho café y queso mascarpone.', '$4.00')"></td>
+                    <td><img src="churros.jpg" alt="Churros" onclick="verProducto('Churros', 'Churros crujientes espolvoreados con azúcar y canela.', '$2.00')"></td>
+                </tr>
+                <tr class="detalles-producto">
+                    <td onclick="verProducto('Donas', 'Donas esponjosas glaseadas de azúcar o cubiertas de chocolate.', '$1.50')">Donas</td>
+                    <td onclick="verProducto('Galletas', 'Galletas horneadas con abundantes chispas de chocolate derretido.', '$1.00')">Galletas</td>
+                    <td onclick="verProducto('Tiramisú', 'Postre italiano frío con capas de bizcocho café y queso mascarpone.', '$4.00')">Tiramisú</td>
+                    <td onclick="verProducto('Churros', 'Churros crujientes espolvoreados con azúcar y canela.', '$2.00')">Churros</td>
+                </tr>
+                <tr>
+                    <td><img src="milhojas.webp" alt="Milhojas" onclick="verProducto('Milhojas', 'Capas de hojaldre crujiente rellenas de delicioso dulce de leche.', '$3.00')"></td>
+                    <td><img src="rolesdecanela.webp" alt="Rollos de Canela" onclick="verProducto('Rollos de Canela', 'Roles suaves con canela y un glaseado dulce de queso crema.', '$2.50')"></td>
+                    <td><img src="flan.webp" alt="Flan" onclick="verProducto('Flan', 'Flan de leche clásico, suave y bañado en caramelo líquido.', '$2.00')"></td>
+                    <td><img src="volcan.jpg" alt="Volcán de Chocolate" onclick="verProducto('Volcán de Chocolate', 'Bizcocho de chocolate que libera un centro de chocolate líquido al cortar.', '$4.50')"></td>
+                </tr>
+                <tr class="detalles-producto">
+                    <td onclick="verProducto('Milhojas', 'Capas de hojaldre crujiente rellenas de delicioso dulce de leche.', '$3.00')">Milhojas</td>
+                    <td onclick="verProducto('Rollos de Canela', 'Roles suaves con canela y un glaseado dulce de queso crema.', '$2.50')">Rollos de Canela</td>
+                    <td onclick="verProducto('Flan', 'Flan de leche clásico, suave y bañado en caramelo líquido.', '$2.00')">Flan</td>
+                    <td onclick="verProducto('Volcán de Chocolate', 'Bizcocho de chocolate que libera un centro de chocolate líquido al cortar.', '$4.50')">Volcán de Chocolate</td>
+                </tr>
+            </table>
+        </section>
+    </main>
+
+    <div id="modalPasteleria" class="modal-bakery">
+        <div class="modal-contenido-bakery">
+            <span class="cerrar-bakery" onclick="cerrarModal()">&times;</span>
+            <h2 id="modalTitulo">Nombre del Producto</h2>
+            <p id="modalDescripcion">Descripción corta del postre.</p>
+            <h3 id="modalPrecio">$0.00</h3>
+        </div>
+    </div>
+
+    <script>
+        // Muestra la ventana con la información del postre seleccionado
+        function verProducto(nombre, descripcion, precio) {
+            document.getElementById("modalTitulo").innerText = nombre;
+            document.getElementById("modalDescripcion").innerText = descripcion;
+            document.getElementById("modalPrecio").innerText = precio;
+            document.getElementById("modalPasteleria").style.display = "block";
+        }
+
+        // Oculta la ventana
+        function cerrarModal() {
+            document.getElementById("modalPasteleria").style.display = "none";
+        }
+
+        // Cierra la ventana si el usuario hace click en la zona oscura exterior
+        window.onclick = function(event) {
+            const modal = document.getElementById("modalPasteleria");
+            if (event.target == modal) {
+                cerrarModal();
+            }
+        }
+    </script>
+
+</body>
+</html>

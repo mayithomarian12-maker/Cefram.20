@@ -1,0 +1,387 @@
+/*1. CONFIGURACIÓN GENERAL Y TIPOGRAFÍA*/
+body { 
+    font-family: 'Pacifico', cursive, sans-serif; 
+    line-height: 1.8; /* Ajustado de 2.6 a 1.8 para que los textos normales no se vean tan separados */
+    margin: 0; 
+    padding: 0; 
+    background-color: #f0b2c4; 
+}
+
+/*2. ENCABEZADO Y NAVEGACIÓN (MENÚ PRINCIPAL)*/
+header { 
+    background-image: url('postre5.jpg');
+    background-size: cover;
+    background-position: center;
+    padding: 80px 20px; 
+    text-align: center;
+    color: rgb(255, 255, 255);
+}
+
+nav {
+    background: #f06969;
+    padding: 15px;
+    text-align: center;
+} 
+
+nav a {
+    color: rgb(255, 255, 255); 
+    margin: 0 15px; 
+    text-decoration: none; 
+    font-weight: bold; 
+    transition: 0.3s; /* Suaviza el cambio de color */
+}
+
+nav a:hover { 
+    color: #cc73f0; 
+}
+
+/*3. CONTENEDORES PRINCIPALES (SECCIONES)*/
+section { 
+    padding: 20px; 
+    max-width: 800px; 
+    margin: 20px auto; /* Centrada en la pantalla con margen superior/inferior */ 
+    background: rgb(253, 210, 210); 
+    border-radius: 8px; 
+    box-shadow: 0 2px 5px rgb(255, 255, 255);
+}
+
+/* Redirección semántica para mantener consistencia */
+main {
+    display: block;
+}
+
+/*4. TABLA DE CATÁLOGO GENERAL DE PRODUCTOS (`productos.html`)*/
+.tabla-productos {
+    width: 90%;
+    margin: 30px auto;
+    border-collapse: collapse;
+    background-color: #fff9f6;
+}
+
+.tabla-productos td {
+    border: 2px solid #ffb6c1;
+    text-align: center;
+    padding: 10px;
+    width: 25%;
+}
+
+.tabla-productos img {
+    width: 180px;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.tabla-productos img:hover {
+    transform: scale(1.05); /* Efecto de zoom suave */
+}
+
+/* Nombres y textos de los postres abajo de las imágenes */
+.detalles-producto td {
+    font-size: 20px;
+    font-weight: bold;
+    color: #ff4f81;
+    background-color: #fff0f5;
+    cursor: pointer;
+}
+
+/*5. ELEMENTOS MULTIMEDIA Y CAJA HORIZONTAL (`index.html`)*/
+.cuadro-unico-horizontal {
+    display: flex;           
+    flex-direction: row;      
+    justify-content: center; 
+    align-items: center; /* Cambiado a center para mejor alineación visual con el botón */ 
+    gap: 30px;                
+    padding: 25px;          
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    max-width: 100%;          
+    box-sizing: border-box;
+}
+
+.item-multimedia {
+    text-align: center;
+    width: 220px;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Asegura que los hijos internos se alineen al centro */
+}
+
+.item-multimedia video {
+    object-fit: cover; 
+    border-radius: 4px;
+}
+
+.item-multimedia img.imagen-medio-circulo {
+    width: 150px;           
+    height: 150px;          
+    border-radius: 50%;     
+    object-fit: cover;      
+    display: inline-block;  
+    margin-bottom: 15px;     
+    perspective: 1000px;
+    animation: movimiento3D 4s ease-in-out infinite; 
+}
+
+/* Botón de Menú del Inicio (Centrado Correctamente) */
+.boton-tienda {
+    display: inline-block;
+    background-color: #d63384;
+    color: white;
+    text-decoration: none;
+    padding: 10px 30px;
+    font-weight: bold;
+    border-radius: 20px;
+    margin: 10px auto 0 auto; /* Centrado automático */
+    text-align: center;
+    transition: background 0.2s;
+    line-height: normal; /* Evita heredar el espaciado alto del body */
+}
+
+.boton-tienda:hover {
+    background-color: #b8236c;
+    color: white;
+}
+
+/*6. TABLA GENERAL DE HORARIOS (`horarios.html`)*/
+.tabla-horarios { 
+    width: 100%; 
+    border-collapse: collapse; 
+    margin-top: 20px; 
+    background-color: #ffffff;
+}
+
+.tabla-horarios th, .tabla-horarios td { 
+    border: 1px solid #ffb6c1; 
+    padding: 12px; 
+    text-align: left; 
+}
+
+.tabla-horarios th { 
+    background-color: #fc89b9; 
+    color: white; 
+}
+
+/*7. ESTILOS DE LA PÁGINA DE PRECIOS Y PEDIDOS (`pedidos.html`)*/
+.pedido-main {
+    max-width: 900px;
+    margin: 20px auto;
+    padding: 20px;
+}
+
+.pedido-titulo {
+    color: #d63384;
+    text-align: center;
+}
+
+.pedido-subtitulo {
+    text-align: center;
+    color: #555;
+}
+
+.tabla-pedidos {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background-color: #ffffff;
+}
+
+.tabla-pedidos thead tr {
+    background-color: #f8f9fa;
+    border-bottom: 2px solid #ff69b4;
+}
+
+.tabla-pedidos th {
+    padding: 12px;
+    text-align: left;
+}
+
+.tabla-pedidos th.centrado, 
+.tabla-pedidos td.centrado {
+    text-align: center;
+}
+
+.tabla-pedidos td {
+    padding: 12px;
+    border-bottom: 1px solid #eeeeee;
+}
+
+.tabla-pedidos .descripcion-postre {
+    color: #666666;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+}
+
+.input-cantidad {
+    width: 60px;
+    padding: 5px;
+    text-align: center;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+/* Formulario de Datos de Entrega */
+.formulario-datos {
+    margin-top: 40px;
+    padding: 20px;
+    border: 1px solid #ff69b4;
+    border-radius: 8px;
+    background-color: #fffafc;
+}
+
+.contenedor-campos {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.grupo-campo label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.input-formulario, 
+.textarea-formulario {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+.textarea-formulario {
+    resize: none;
+}
+
+.btn-enviar-pedido {
+    background-color: #d63384;
+    color: white;
+    border: none;
+    padding: 14px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 25px;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: background-color 0.2s;
+    font-family: 'Pacifico', cursive, sans-serif;
+}
+
+.btn-enviar-pedido:hover {
+    background-color: #c2185b;
+}
+
+/*8. VENTANAS FLOTANTES (MODALES DE PRODUCTOS Y DE ALERTAS SIMULADAS)*/
+
+/* Fondo oscuro del modal */
+.modal-bakery, .modal-alerta-contenedor {
+    display: none; 
+    position: fixed; 
+    z-index: 9999; 
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%; 
+    background-color: rgba(0,0,0,0.6); 
+}
+
+/* Caja de contenido - Catálogo */
+.modal-contenido-bakery {
+    background-color: #ffffff;
+    margin: 15% auto; 
+    padding: 30px;
+    border-radius: 12px;
+    width: 85%;
+    max-width: 450px;
+    position: relative;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: center;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+}
+
+/* Caja de contenido - Alerta Personalizada (Pedidos y Contacto) */
+.modal-alerta-caja {
+    background-color: #ffffff; 
+    width: 320px; 
+    margin: 15% auto; 
+    padding: 25px; 
+    text-align: center; 
+    border-radius: 12px; 
+    border: 2px solid #ff69b4;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    font-family: Arial, sans-serif;
+}
+
+/* Botones de cierre y textos del modal */
+.cerrar-bakery {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 30px;
+    font-weight: bold;
+    color: #aaa;
+    cursor: pointer;
+}
+.cerrar-bakery:hover { color: #333; }
+
+#modalTitulo, .modal-alerta-caja h3 { color: #d63384; margin-top: 10px; }
+.modal-alerta-caja h3 { font-size: 22px; margin-top: 0; }
+#modalDescripcion, .modal-alerta-caja p { color: #555; font-size: 15px; }
+#modalPrecio { color: #28a745; font-size: 24px; margin: 15px 0; }
+
+/* Botones de acción del Modal */
+.btn-comprar-bakery, .btn-cerrar-alerta {
+    background-color: #d63384;
+    color: white;
+    border: none;
+    padding: 12px 30px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 25px;
+    transition: background 0.2s;
+}
+.btn-cerrar-alerta { padding: 10px 25px; font-size: 14px; }
+.btn-comprar-bakery:hover, .btn-cerrar-alerta:hover { background-color: #b8236c; }
+
+/*9. ANIMACIONES EFECTOS 3D*/
+@keyframes movimiento3D {
+    0% { transform: translateX(-15px) rotateY(-25deg); }
+    50% { transform: translateX(15px) rotateY(25deg); }
+    100% { transform: translateX(-15px) rotateY(-25deg); }
+}
+@keyframes flotarSuave {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-8px); }
+    100% { transform: translateY(0px); }
+}
+
+/*CARRUSEL AUTOMÁTICO HORIZONTAL*/
+.carrusel-contenedor {
+    max-width: 750px;         /* Ancho máximo similar al de la imagen que tenías */
+    margin: 25px auto;        /* Centra el carrusel en la página */
+    overflow: hidden;         /* Oculta las imágenes que están en fila esperando su turno */
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    background-color: #fff9f6;
+}
+
+.carrusel-diapositivas {
+    display: flex;            /* Pone todas las fotos una al lado de la otra en línea horizontal */
+    width: 100%;
+    transition: transform 0.6s ease-in-out; /* Controla la suavidad del deslizamiento */
+}
+
+.carrusel-diapositivas img {
+    min-width: 100%;          /* Cada foto se estira para ocupar exactamente toda la pantalla visible */
+    height: 380px;            /* Altura fija ideal para que se aprecien tus postres */
+    object-fit: cover;        /* Hace que las imágenes se adapten sin deformarse o verse estiradas */
+    display: block;
+}

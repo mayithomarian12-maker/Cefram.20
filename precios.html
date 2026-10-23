@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Pastelería - Inicio</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+    <header>
+        <h1>Dulces tentaciones</h1>
+    </header>
+
+    <nav>
+        <a href="index.html">Inicio</a>
+        <a href="productos.html">Productos</a>
+        <a href="pedidos.html">Pedidos</a>
+        <a href="horarios.html">Horarios</a>
+        <a href="contacto.html">Contacto</a>
+        </nav>
+
+       <main class="pedido-main">
+        
+        <form onsubmit="event.preventDefault(); alert('¡Pedido enviado!'); this.reset();">
+            
+            <section>
+                <h2 class="pedido-titulo">Precios y Cantidades</h2>
+                <p class="pedido-subtitulo">Indica la cantidad que deseas de cada postre directamente en la tabla:</p>
+                
+                <table class="tabla-pedidos">
+                    <thead>
+                        <tr>
+                            <th>Postre</th>
+                            <th>Descripción</th>
+                            <th class="centrado">Precio</th>
+                            <th class="centrado" style="width: 120px;">Cantidad</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Cheesecake</strong></td>
+                            <td class="descripcion-postre">Pastel de queso con galleta de mantequilla y fresas, decorado con jalea de fresa.</td>
+                            <td class="centrado"><strong>$3.50</strong></td>
+                            <td class="centrado">
+                                <input type="number" name="cant_Cheesecake" min="0" max="50" value="0" class="input-cantidad">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><strong>Cupcake</strong></td>
+                            <td class="descripcion-postre">Deliciosos panquecitos decorados con crema de mantequilla de vainilla o chocolate.</td>
+                            <td class="centrado"><strong>$1.00</strong></td>
+                            <td class="centrado">
+                                <input type="number" name="cant_Cupcake" min="0" max="50" value="0" class="input-cantidad">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><strong>Brownie</strong></td>
+                            <td class="descripcion-postre">Bizcocho de chocolate espeso y húmedo con trozos de nuez, servido tibio.</td>
+                            <td class="centrado"><strong>$2.50</strong></td>
+                            <td class="centrado">
+                                <input type="number" name="cant_Brownie" min="0" max="50" value="0" class="input-cantidad">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><strong>Tres Leches</strong></td>
+                            <td class="descripcion-postre">Combinación perfecta de pastel de vainilla, bañado con tres tipos de leche y turrón.</td>
+                            <td class="centrado"><strong>$2.50</strong></td>
+                            <td class="centrado">
+                                <input type="number" name="cant_TresLeches" min="0" max="50" value="0" class="input-cantidad">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><strong>Donas</strong></td>
+                            <td class="descripcion-postre">Masa ligera y esponjosa, frita a la perfección, cubiertas con glaseado.</td>
+                            <td class="centrado"><strong>$1.00</strong></td>
+                            <td class="centrado">
+                                <input type="number" name="cant_Donas" min="0" max="50" value="0" class="input-cantidad">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><strong>Galletas</strong></td>
+                            <td class="descripcion-postre">Galleta base de vainilla, chispas de chocolate con leche.</td>
+                            <td class="centrado"><strong>$1.25</strong></td>
+                            <td class="centrado">
+                                <input type="number" name="cant_Galletas" min="0" max="50" value="0" class="input-cantidad">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><strong>Tiramisú</strong></td>
+                            <td class="descripcion-postre">Postre italiano frío con capas de bizcocho café y queso mascarpone.</td>
+                            <td class="centrado"><strong>$4.00</strong></td>
+                            <td class="centrado">
+                                <input type="number" name="cant_Tiramisu" min="0" max="50" value="0" class="input-cantidad">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><strong>Churros</strong></td>
+                            <td class="descripcion-postre">Churros crujientes espolvoreados con azúcar y canela.</td>
+                            <td class="centrado"><strong>$2.00</strong></td>
+                            <td class="centrado">
+                                <input type="number" name="cant_Churros" min="0" max="50" value="0" class="input-cantidad">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><strong>Milhojas</strong></td>
+                            <td class="descripcion-postre">Capas de hojaldre crujiente rellenas de delicioso dulce de leche.</td>
+                            <td class="centrado"><strong>$3.00</strong></td>
+                            <td class="centrado">
+                                <input type="number" name="cant_Milhojas" min="0" max="50" value="0" class="input-cantidad">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><strong>Rollos de canela</strong></td>
+                            <td class="descripcion-postre">Suaves y deliciosos enrolladitos de canela cubiertos con icing de vainilla.</td>
+                            <td class="centrado"><strong>$2.50</strong></td>
+                            <td class="centrado">
+                                <input type="number" name="cant_RollosCanela" min="0" max="50" value="0" class="input-cantidad">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><strong>Flan</strong></td>
+                            <td class="descripcion-postre">Flan de leche clásico, suave y bañado en caramelo líquido.</td>
+                            <td class="centrado"><strong>$2.00</strong></td>
+                            <td class="centrado">
+                                <input type="number" name="cant_Flan" min="0" max="50" value="0" class="input-cantidad">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><strong>Volcán de Chocolate</strong></td>
+                            <td class="descripcion-postre">Bizcocho de chocolate que libera un centro de chocolate líquido al cortar.</td>
+                            <td class="centrado"><strong>$4.50</strong></td>
+                            <td class="centrado">
+                                <input type="number" name="cant_Volcan" min="0" max="50" value="0" class="input-cantidad">
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <section class="formulario-datos">
+                <h3 class="pedido-titulo" style="margin-bottom: 20px;">Datos de Entrega 🍰</h3>
+                
+                <div class="contenedor-campos">
+                    <div class="grupo-campo">
+                        <label><strong>Tu Nombre Completo:</strong></label>
+                        <input type="text" name="cliente_nombre" placeholder="Ej. María López" required class="input-formulario">
+                    </div>
+
+                    <div class="grupo-campo">
+                        <label><strong>Teléfono de Contacto:</strong></label>
+                        <input type="tel" name="cliente_telefono" placeholder="Ej. 7777-1234" required class="input-formulario">
+                    </div>
+
+                    <div class="grupo-campo">
+                        <label><strong>Dirección Exacta de Entrega:</strong></label>
+                        <textarea name="cliente_direccion" rows="3" placeholder="Escribe los detalles de tu dirección" required class="textarea-formulario"></textarea>
+                    </div>
+
+                    <div class="grupo-campo">
+                        <label><strong>Fecha y Hora Preferida:</strong></label>
+                        <input type="datetime-local" name="cliente_fecha_entrega" required class="input-formulario">
+                    </div>
+
+                    <button type="submit" class="btn-enviar-pedido">
+                        Enviar Pedido 🚀
+                    </button>
+                </div>
+            </section>
+
+        </form>
+    </main>
+
+</body>
+</html>

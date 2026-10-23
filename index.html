@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Pastelería - Inicio</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+    <header>
+        <h1>Dulces tentaciones</h1>
+    </header>
+
+    <nav>
+        <a href="index.html">Inicio</a>
+        <a href="pedidos.html">Pedidos</a>
+        <a href="horarios.html">Horarios</a>
+        <a href="contacto.html">Contacto</a>
+        </nav>
+
+<section>
+            <h2>Bienvenidos a nuestra Pastelería</h2>
+            <p>Nuestros postres están hechos con ingredientes frescos y con mucho amor.</p>
+
+            <div class="carrusel-contenedor">
+    <div class="carrusel-diapositivas" id="carruselAutomatico">
+        <img src="postre1.jpg" alt="Nuestros postres frescos">
+        <img src="postre2.jpg" alt="Cheesecake de fresa">
+        <img src="postre3.jpg" alt="Pastel Tres Leches">
+        <img src="postre4.jpg" alt="Brownies de chocolate">
+    </div>
+</div>
+
+<script>
+    let posicion = 0;
+    const contenedor = document.getElementById("carruselAutomatico");
+    
+    function moverCarrusel() {
+        // Cuenta cuántas fotos subiste en total
+        const totalFotos = contenedor.querySelectorAll("img").length;
+        
+        posicion++;
+        
+        // Si llega al final de las fotos, regresa a la primera (posición 0)
+        if (posicion >= totalFotos) {
+            posicion = 0;
+        }
+        
+        // Desplaza la fila de manera horizontal multiplicando por -100%
+        contenedor.style.transform = `translateX(-${posicion * 100}%)`;
+    }
+
+    // Cambia la foto automáticamente cada 3 segundos (3000 milisegundos)
+    setInterval(moverCarrusel, 3000);
+</script>
+        </section>
+
+        <section>
+            <div class="contenedor-producto"> 
+                <div class="cuadro cuadro-unico-horizontal">  
+                    <div class="item-multimedia">
+                        <video src="tienda.mp4" controls width="200" height="150"></video>
+                        <p><strong>Producto en nuestra tienda</strong></p>
+                    </div>
+                    <div class="item-multimedia">
+                        <img src="imagen en movimiento.svg" class="imagen-medio-circulo" alt="Imagen en movimiento">
+                        <a href="productos.html" class="boton-tienda">Menú</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+</html>
